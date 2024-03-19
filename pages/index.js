@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Footer from "@/Components/footer";
 
 // //backgrounds bilder
 // const imageUrls = [
@@ -34,7 +35,9 @@ export default function Home() {
   // console.log(backgroundImageStyle);
 
   return (
-        <div className="w-full">
+    <div className="flex flex-col justify-between min-h-screen">
+
+        <div className="w-full mb-8">
          
           <h1 id="title" className="mt-20 flex justify-center text-6xl">
             Chas Quiz
@@ -43,7 +46,7 @@ export default function Home() {
             <div className="flex justify-center items-center flex-col">
               <p className="flex justify-center font-semibold">Start a quiz!</p>
               <Link href="/quiz">
-                <button className="h-16 text-slate-100 w-60 p-2 border-none font-semibold rounded-full  bg-blue-600 hover:bg-blue-700 hover:cursor-pointer text-xl ">
+                <button className="h-16 text-slate-100 w-60 p-2 border-none font-semibold rounded-full bg-blue-600 hover:bg-blue-700 hover:cursor-pointer text-xl ">
                   Start a quiz
                 </button>
               </Link>
@@ -58,6 +61,9 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+        <Footer></Footer>
+
         </div>
   );
 }

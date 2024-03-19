@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-regular-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import Footer from "@/Components/footer";
 
 export default function CustomQuizPage() {
   const [newQuestion, setNewQuestion] = useState("");
@@ -89,6 +90,7 @@ const newQuizId = Date.now();
   console.log(finishedQuizzes);
 
   return (
+    <div className="flex flex-col justify-between min-h-screen">
     <div className="flex justify-center flex-col">
       <h1 className="text-center mt-20">Make your own quiz!</h1>
       <div className="flex justify-center ">
@@ -112,7 +114,7 @@ const newQuizId = Date.now();
         setNewQuestion={setNewQuestion}
       />
 
-      <div className="flex justify-center flex-col mb-40">
+      <div className="flex justify-center flex-col mb-16">
 
         <ul className="grid grid-cols-2 gap-4 md:grid-cols-4 p-6">
           {questions.map((question, index) => (
@@ -328,6 +330,8 @@ const newQuizId = Date.now();
           </ul>
         </div>
       </div>
+    </div>
+    <Footer></Footer>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import Footer from "@/Components/footer";
+/* import Footer from "@/Components/footer"; */
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -19,7 +19,7 @@ export default function Document() {
       <body className="font-quicksand antialiased"> {/* font-quicksand from tailwind.config.js */}
         <Main />
         <NextScript />
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </body>
     </Html>
   );
